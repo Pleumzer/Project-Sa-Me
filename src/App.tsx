@@ -24,11 +24,11 @@ function App() {
               </div>
           </div>
         </Content>
-        {/* <Footer>
+        <Footer>
           <div style={{justifyContent:"center"}}>
           <Pagination defaultCurrent={6} total={500} />;
           </div>
-        </Footer> */}
+        </Footer>
       </Layout>
       
   );
