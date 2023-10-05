@@ -18,9 +18,6 @@ function App() {
         <Content style={{backgroundColor:"#F4F4F4",height:"100vh"}}>
           <Mainpage />
         </Content>
-        <Footer>
-          
-        </Footer>
       </Layout>
       
   );
