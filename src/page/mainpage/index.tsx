@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import logo from './logo.svg';
 import { Layout, Input, Pagination, Button, Divider, Card } from 'antd';
-
+import InfiniteScroll from 'react-infinite-scroll-component';
 import "./index.css";
 
 
@@ -11,6 +11,44 @@ const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
   console.log('Change:', e.target.value);
 };
 
+interface Comment {
+  MemberId: number;
+  MemberName: string;
+  Message: string;
+}
+const data: Comment[] = [
+  {
+    MemberId: 1,
+    MemberName: "John",
+    Message: "สนุกมากเลย"
+  },
+  {
+    MemberId: 2,
+    MemberName: "kiriyo",
+    Message: "โอ้โหสุดยอด"
+  },
+  {
+    MemberId: 3,
+    MemberName: "rashford",
+    Message: "เดะผมยิงเอง"
+  },
+  {
+    MemberId: 4,
+    MemberName: "ปึ๋งปั๋ง",
+    Message: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam totam nobis obcaecati natus, at perferendis repudiandae labore provident voluptatibus iusto sit deleniti dignissimos nam ipsa. Porro, veniam. Reprehenderit, praesentium soluta."
+  },
+  {
+    MemberId: 5,
+    MemberName: "OwO",
+    Message: "สนุก"
+  },
+  {
+    MemberId: 6,
+    MemberName: "LLOLL",
+    Message: "ไม่น่าเชื่อเลยว่าจะเป็นแบบนี้"
+  },
+
+]
 
 function Mainpage() {
   return (
@@ -24,13 +62,20 @@ function Mainpage() {
               <Button style={{ backgroundColor: "#5C469C", height: 50, width: 150, justifyContent: "center", marginTop: "10px" }} type="primary">Post</Button>
             </div>
             <div>
-              <Divider orientation="left">Comment</Divider>
-              <Card>
+                <div>
+                  <Divider orientation="left">
+                      <p>Comment</p>
+                   </Divider>
+                </div>
+            <div>  
+              <Card className='card-color'>
                 <h4 style={{ color: "#6844F8" }}>Username</h4>
                 <p>iatur quibusdam non hic accusantium maxime ea officia! Beatae praesentium iste necessitatibus.</p>
               </Card>
               <Divider></Divider>
-              <Card>
+            </div>
+              
+              {/* <Card>
                 <h4 style={{ color: "#6844F8" }}>Username</h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, nihil, nostrum eum repellat eaque blanditiis id pariatur ullam debitis fugiat inventore repudiandae! Mollitia, ab vel necessitatibus alias sed quo quaerat.</p>
               </Card>
@@ -43,7 +88,7 @@ function Mainpage() {
               <Card>
                 <h4 style={{ color: "#6844F8" }}>Username</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quo rerum ratione eaque commodi dolore temporibus labore. Placeat animi aliquam commodi omnis, quis ratione! Cum ea quod odio voluptates quis?</p>
-              </Card>
+              </Card> */}
               <Divider><Button type="link">SEE MORE</Button></Divider>
             </div>
           </div>
