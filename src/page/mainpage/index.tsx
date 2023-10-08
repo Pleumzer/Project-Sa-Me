@@ -11,44 +11,8 @@ const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
   console.log('Change:', e.target.value);
 };
 
-interface Comment {
-  MemberId: number;
-  MemberName: string;
-  Message: string;
-}
-const data: Comment[] = [
-  {
-    MemberId: 1,
-    MemberName: "John",
-    Message: "สนุกมากเลย"
-  },
-  {
-    MemberId: 2,
-    MemberName: "kiriyo",
-    Message: "โอ้โหสุดยอด"
-  },
-  {
-    MemberId: 3,
-    MemberName: "rashford",
-    Message: "เดะผมยิงเอง"
-  },
-  {
-    MemberId: 4,
-    MemberName: "ปึ๋งปั๋ง",
-    Message: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam totam nobis obcaecati natus, at perferendis repudiandae labore provident voluptatibus iusto sit deleniti dignissimos nam ipsa. Porro, veniam. Reprehenderit, praesentium soluta."
-  },
-  {
-    MemberId: 5,
-    MemberName: "OwO",
-    Message: "สนุก"
-  },
-  {
-    MemberId: 6,
-    MemberName: "LLOLL",
-    Message: "ไม่น่าเชื่อเลยว่าจะเป็นแบบนี้"
-  },
 
-]
+
 
 function Mainpage() {
   return (
